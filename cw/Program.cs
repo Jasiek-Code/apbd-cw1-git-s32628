@@ -38,6 +38,8 @@ class StatisticsHelper
     
     public void CalculateMin(int[] values)
     {
-
+        var min = values.Min();
+        
+        Console.WriteLine($"Min: {min}");
     }
 }
