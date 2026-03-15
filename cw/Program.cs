@@ -6,7 +6,7 @@ class Program
     {
         var statisticsHelper = new StatisticsHelper();
         
-        Console.WriteLine("Input a number:");
+        Console.WriteLine("Give me a number:");
         
         var input = Console.ReadLine();
 
