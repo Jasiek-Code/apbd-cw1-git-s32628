@@ -15,6 +15,7 @@ class Program
             .ToArray();
         
         statisticsHelper.CalculateAverage(values);
+        statisticsHelper.CalculateMax(values);
     }
 }
 
@@ -26,5 +27,12 @@ class StatisticsHelper
         var mean = sum / values.Length;
         
         Console.WriteLine($"Average: {mean}");
+    }
+
+    public void CalculateMax(int[] values)
+    {
+        var max = values.Max();
+        
+        Console.WriteLine($"Max: {max}");
     }
 }
