@@ -35,4 +35,9 @@ class StatisticsHelper
         
         Console.WriteLine($"Max: {max}");
     }
+    
+    public void CalculateMin(int[] values)
+    {
+
+    }
 }
