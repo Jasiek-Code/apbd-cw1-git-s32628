@@ -4,16 +4,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        int number = 10;
-        char spc = ' ';
+        var statisticsHelper = new StatisticsHelper();
         
-        for (int i = 1; i <= number; i++)
+        Console.WriteLine("Input a number:");
+        
+        var input = Console.ReadLine();
+        
+        statisticsHelper.InputDebug(input);
+        
+        
+    }
+}
+
+class StatisticsHelper
+{
+    public void InputDebug(string input)
+    {
+        if (input.Length > 0)
         {
-            for (int j = 20; j >= 0; j-=i)
-            {
-                Console.Write(spc);
-            }
-            Console.WriteLine(i);
+            Console.Write("Input: " + input); 
+        }
+        else
+        { 
+            throw new ArgumentException("No user input");
         }
     }
 }
