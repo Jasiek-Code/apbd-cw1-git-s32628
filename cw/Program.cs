@@ -9,24 +9,22 @@ class Program
         Console.WriteLine("Input a number:");
         
         var input = Console.ReadLine();
+
+        var values = input.Split(' ')
+            .Select(n => int.Parse(n.Trim()))
+            .ToArray();
         
-        statisticsHelper.InputDebug(input);
-        
-        
+        statisticsHelper.CalculateAverage(values);
     }
 }
 
 class StatisticsHelper
 {
-    public void InputDebug(string input)
+    public void CalculateAverage(int[] values)
     {
-        if (input.Length > 0)
-        {
-            Console.Write("Input: " + input); 
-        }
-        else
-        { 
-            throw new ArgumentException("No user input");
-        }
+        var sum = values.Sum();
+        var mean = sum / values.Length;
+        
+        Console.WriteLine($"Average: {mean}");
     }
 }
