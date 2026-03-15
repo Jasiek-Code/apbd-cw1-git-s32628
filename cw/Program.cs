@@ -16,6 +16,7 @@ class Program
         
         statisticsHelper.CalculateAverage(values);
         statisticsHelper.CalculateMax(values);
+        statisticsHelper.CalculateMin(values);
     }
 }
 
