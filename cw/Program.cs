@@ -6,7 +6,7 @@ class Program
     {
         var statisticsHelper = new StatisticsHelper();
         
-        Console.WriteLine("Please input numbers:");
+        Console.WriteLine("Please input numbers separated by spaces:");
         
         var input = Console.ReadLine();
 
